@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Love ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff4e50, #ff7eb3);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.6);
+            width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 120px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4e50;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff1e3c;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255,255,255,0.8);
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(100vh); }
+            to { transform: translateY(-10vh); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>I'm Sorry ❤️</h1>
+        <p>
+            Hey My Love,<br><br>
+            I know you're upset and I truly hate seeing you sad.<br>
+            You mean everything to me.<br><br>
+            Please forgive me... I love you more than words can say 💕
+        </p>
+
+        <button onclick="openHeart()">Open My Heart 💌</button>
+    </div>
+
+    <script>
+        function openHeart() {
+            alert("No matter what happens, I will always choose you ❤️");
+        }
+
+        // Floating hearts animation
+        setInterval(function() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = Math.random() * 20 + 20 + "px";
+            document.body.appendChild(heart);
+
+            setTimeout(function() {
+                heart.remove();
+            }, 6000);
+        }, 500);
+    </script>
+
+</body>
+</html>
